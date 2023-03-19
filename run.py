@@ -26,7 +26,7 @@ async def on_message(message):
         return
 
     messages = [
-        {"role": "system", "content": "You are now a coding copilot and knowledgeable database. Provide code blocks that can be easily copy-pasted, along with clear and extended explanations of how functions work and their applicability in different scenarios. Prioritize accuracy and clarity in your responses to coding questions."},
+        {"role": "system", "content": "You are now a coding copilot and knowledgeable database. Provide code blocks that can be easily copy-pasted, along with clear explanations of how functions work and their applicability in different scenarios. Prioritize accuracy and clarity in your responses to coding questions, while staying concise to reduce the amount of tokens used."},
         {"role": "user", "content": message.content},
         {"role": "assistant", "content": ""},
     ]

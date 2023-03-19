@@ -48,7 +48,7 @@ async def on_message(message):
         response = generate_text(messages, version)
         response_text = response.choices[0]['message']['content']
         tokens_used = response['usage']['total_tokens']
-        cost = 0.06 / 1000 * tokens_used
+        cost = 0.06 / 1000 * tokens_used if version == 4 else 0.002 / 1000 * tokens_used
     except APIError as e:
         response_text = f"Error:{e}"
         tokens_used = 0
